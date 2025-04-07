@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOLO Object Detection</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+        }
+        iframe {
+            border: 1px solid #ccc;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"><br>
+        <h2>Deteksi Makanan Warteg</h2>
+        <!-- <h3>Nama yang Disimpan (localStorage): <span id="storedNameHTML"></span></h3> -->
+        <iframe src="http://localhost:8501" width="700" height="700"></iframe>
+    </div>
+
+    <script>
+        function displayStoredName() {
+            const storedName = localStorage.getItem('username');
+            document.getElementById('storedNameHTML').innerText = storedName ? storedName : "Belum ada nama disimpan.";
+        }
+
+        window.onload = displayStoredName;
+    </script>
+</body>
+</html>
